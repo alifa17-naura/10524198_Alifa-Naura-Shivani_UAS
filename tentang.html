@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tentang Saya - Female Beauty</title>
+<title>Belanja - Female Beauty</title>
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -31,7 +31,7 @@
     padding: 10px 20px;
   }
   nav a {
-    color: #fff7fa;
+    color: #ffe6f1;
     text-decoration: none;
     margin-right: 20px;
     font-weight: 600;
@@ -64,32 +64,48 @@
     padding: 15px 20px;
     font-size: 0.9em;
   }
-  h2, h3 {
-    margin-top: 0;
-  }
-  .profile {
-    background: #fbf4eb;
+  form {
+    background: #ffe6f1;
     border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 6px 10px rgb(198 130 176 / 0.4);
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    max-width: 480px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgb(198 130 176 / 0.4);
+  }
+  form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 700;
+  }
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="tel"],
+  form select,
+  form textarea {
+    width: 100%;
+    padding: 8px 12px;
+    margin-top: 8px;
+    border: 2px solid #d66ba0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+  }
+  form textarea {
+    resize: vertical;
+    min-height: 70px;
+  }
+  form button {
     margin-top: 20px;
+    margin-right: 10px;
+    background: #d66ba0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
-  .profile img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #d66ba0;
-  }
-  .profile-info {
-    flex: 1;
-  }
-  .contact-info p {
-    margin: 8px 0;
+  form button:hover {
+    background: #9c3d6a;
   }
   .sidebar img {
     margin-top: 15px;
@@ -113,58 +129,62 @@
       margin-top: 20px;
       width: 100%;
     }
-    .profile {
-      flex-direction: column;
-      text-align: center;
-    }
-    .profile-info {
-      width: 100%;
-    }
   }
 </style>
 </head>
 <body>
 <header>
   <h1 align="center">Female Beauty</h1>
-  <marquee behavior="scroll" direction="right" scrollamount="8">Dapatkan semua produk kecantikan favoritmu!</marquee>
+  <marquee behavior="scroll" direction="right" scrollamount="8">Ayo isi formulir pembelanjaan untuk dapatkan produk favoritmu!</marquee>
 </header>
 <nav>
   <a href="index.html">Produk</a>
-  <a href="transaksi.html">Belanja</a>
+  <a href="transaksi.html" class="active">Belanja</a>
   <a href="tentang.html">Tentang Saya</a>
+  <a href="invoice.html">Struk</a>
 </nav>
 <main>
   <section class="content">
-    <h2>Tentang Female Beauty</h2>
-    <p align="justify">
-      Female Beauty adalah toko online yang menyediakan berbagai produk kecantikan berkualitas tinggi untuk memenuhi kebutuhan perawatan diri Anda. Kami berkomitmen menghadirkan produk yang aman, efektif, dan trendi agar Anda selalu tampil percaya diri dan mempesona setiap hari.
-    </p>
-    <p align="justify">
-      Didirikan pada tahun 2025, Beauty Female berusaha menjadi pilihan utama dalam dunia kecantikan digital dengan pelayanan ramah dan produk pilihan dari merek terpercaya.
-    </p>
-    <h3>Profil Mahasiswa</h3>
-    <div class="profile">
-      <img src="gambar/foto 2.jpg" alt="Foto Saya" />
-      <div class="profile-info">
-        <h3>Nama : Alifa Naura Shivani</h>
-        <p>NIM : 10524198</p>
-        <p>Kelas : IS-2</p>
-      </div>
-    </div>
-    <p></p>
-    <h3>Kontak Kami</h3>
-    <div class="contact-info">
-      <p>Email : alifanaurashivani17@gmail.com</p>
-      <p>Telepon : 085797513717</p>
-      <p>Instagram : @alifanaurashivani</p>
-    </div>
+    <h2>Isi Formulir Pembelanjaan</h2>
+    <form id="transactionForm" action="invoice.html" method="GET">
+      <label for="nama">Nama Pembeli</label>
+      <input type="text" id="nama" name="nama" placeholder="Nama lengkap Anda" required />
+
+      <label for="produk">Produk Pilihan</label>
+      <select id="produk" name="produk" required>
+        <option value="" disabled selected>Pilih produk</option>
+        <option value="Face Wash">Face wash</option>
+        <option value="Serum">Serum</option>
+        <option value="Moisturaizer">Moisturaizer</option>
+        <option value="Sunscreen">Sunscreen</option>
+      </select>
+
+      <label for="jumlah">Jumlah Pembelian</label>
+      <input type="number" id="jumlah" name="jumlah" min="1" value="1" required />
+
+      <label for="metode">Metode Pembayaran</label>
+      <select id="metode" name="metode" required>
+        <option value="" disabled selected>Pilih metode pembayaran</option>
+        <option value="Transfer Bank">Transfer Bank</option>
+        <option value="COD">Cash on Delivery (COD)</option>
+        <option value="E-Wallet">E-Wallet</option>
+      </select>
+
+      <label for="alamat">Alamat Pengiriman</label>
+      <textarea id="alamat" name="alamat" placeholder="Tulis alamat lengkap pengiriman" required></textarea>
+
+      <label for="telepon">Nomor Telepon</label>
+      <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx" pattern="[0-9]{10,15}" required />
+
+      <button type="submit">Checkout/Buat Pesanan</button>
+      <button type="reset">Reset</button>
+    </form>
   </section>
   <aside class="sidebar">
-    <h2 align="center">Inspirasi Model</h2>
-      <img src="gambar/xaviera.jpeg" alt="Inspirasi Kecantikan" />
+    <h3 align="center">PROMO SPESIAL!!</h3>
+      <img src="gambar/Skincare set.jpeg" alt="Promo Diskon" />
     </a>
-    <h3 align="center">XAVIERA PUTRI</h3>
-    <p align="center">Temukan inspirasi kecantikan terbaru setiap hari.</p>
+    <p align="center">Dapatkan diskon menarik dengan beli one set skincare</p>
   </aside>
 </main>
 <footer>
