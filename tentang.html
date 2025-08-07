@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tentang Saya - Female Beauty</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0;
+    background: #fff0f6;
+    color: #8fb78f;
+  }
+  header {
+    background: #d66ba0;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+  }
+  header h1 {
+    margin: 0;
+  }
+  marquee {
+    margin-top: 5px;
+    font-size: 1.1em;
+    color: #ffe6f1;
+  }
+  nav {
+    background: #8fb78f;
+    display: flex;
+    padding: 10px 20px;
+  }
+  nav a {
+    color: #fff7fa;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 600;
+  }
+  nav a:hover,
+  nav a.active {
+    text-decoration: underline;
+  }
+  main {
+    display: flex;
+    padding: 20px;
+    min-height: 80vh;
+  }
+  .content {
+    flex: 3;
+    padding-right: 20px;
+  }
+  .sidebar {
+    flex: 1;
+    background: #f8bbd0;
+    border-radius: 8px;
+    padding: 15px;
+    color: #9c3d6a;
+    font-weight: 600;
+  }
+  footer {
+    background: #d66ba0;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+  }
+  h2, h3 {
+    margin-top: 0;
+  }
+  .profile {
+    background: #fbf4eb;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 6px 10px rgb(198 130 176 / 0.4);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 480px;
+    margin-top: 20px;
+  }
+  .profile img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #d66ba0;
+  }
+  .profile-info {
+    flex: 1;
+  }
+  .contact-info p {
+    margin: 8px 0;
+  }
+  .sidebar img {
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .sidebar img:hover {
+    transform: scale(1.05);
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    main {
+      flex-direction: column;
+    }
+    .content {
+      padding-right: 0;
+    }
+    .sidebar {
+      margin-top: 20px;
+      width: 100%;
+    }
+    .profile {
+      flex-direction: column;
+      text-align: center;
+    }
+    .profile-info {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1 align="center">Female Beauty</h1>
+  <marquee behavior="scroll" direction="right" scrollamount="8">Dapatkan semua produk kecantikan favoritmu!</marquee>
+</header>
+<nav>
+  <a href="index.html">Produk</a>
+  <a href="transaksi.html">Belanja</a>
+  <a href="invoice.html">Struk</a>
+  <a href="tentang.html" class="active">Tentang Saya</a>
+  
+</nav>
+<main>
+  <section class="content">
+    <h2>Tentang Female Beauty</h2>
+    <p align="justify">
+      Female Beauty adalah toko online yang menyediakan berbagai produk kecantikan berkualitas tinggi untuk memenuhi kebutuhan perawatan diri Anda. Kami berkomitmen menghadirkan produk yang aman, efektif, dan trendi agar Anda selalu tampil percaya diri dan mempesona setiap hari.
+    </p>
+    <p align="justify">
+      Didirikan pada tahun 2025, Beauty Female berusaha menjadi pilihan utama dalam dunia kecantikan digital dengan pelayanan ramah dan produk pilihan dari merek terpercaya.
+    </p>
+    <h3>Profil Mahasiswa</h3>
+    <div class="profile">
+      <img src="gambar/foto 2.jpg" alt="Foto Saya" />
+      <div class="profile-info">
+        <h3>Nama : Alifa Naura Shivani</h>
+        <p>NIM : 10524198</p>
+        <p>Kelas : IS-2</p>
+      </div>
+    </div>
+    <p></p>
+    <h3>Kontak Kami</h3>
+    <div class="contact-info">
+      <p>Email : alifanaurashivani17@gmail.com</p>
+      <p>Telepon : 085797513717</p>
+      <p>Instagram : @alifanaurashivani</p>
+    </div>
+  </section>
+  <aside class="sidebar">
+    <h2 align="center">Inspirasi Model</h2>
+      <img src="gambar/xaviera.jpeg" alt="Inspirasi Kecantikan" />
+    </a>
+    <h3 align="center">XAVIERA PUTRI</h3>
+    <p align="center">Temukan inspirasi kecantikan terbaru setiap hari.</p>
+  </aside>
+</main>
+<footer>
+  &copy; 2025 Female Beauty. All rights reserved.
+</footer>
+</body>
+</html>
