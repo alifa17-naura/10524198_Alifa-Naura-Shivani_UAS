@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=2" />
+<title>Female Beauty Store</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0;
+    background: #fff0f6;
+    color: #8fb78f;
+  }
+  header {
+    background: #d66ba0;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+  }
+  header h1 {
+    margin: 0;
+  }
+  marquee {
+    margin-top: 5px;
+    font-size: 1.1em;
+    color: #ffe6f1;
+  }
+  nav {
+    background: #8fb78f;
+    display: flex;
+    padding: 10px 20px;
+  }
+  nav a {
+    color: #ffe6f1;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 600;
+  }
+  nav a:hover,
+  nav a.active {
+    text-decoration: underline;
+  }
+  main {
+    display: flex;
+    padding: 20px;
+    min-height: 80vh;
+  }
+  .content {
+    flex: 3;
+    padding-right: 20px;
+  }
+  .sidebar {
+    flex: 1;
+    background: #f8bbd0;
+    border-radius: 8px;
+    padding: 15px;
+    color: #9c3d6a;
+    font-weight: 600;
+  }
+  footer {
+    background: #d66ba0;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+  }
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 20px;
+  }
+  .product-card {
+    background: #fff0f6;
+    border: 2px solid #d66ba0;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 8px rgb(198 130 176 / 0.4);
+    text-align: center;
+  }
+  .product-card h3 {
+    margin: 10px 0 5px 0;
+  }
+  .product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .product-card img:hover {
+    transform: scale(1.05);
+  }
+  .btn-buy {
+    margin-top: 10px;
+    background: #d66ba0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-buy:hover {
+    background: #9c3d6a;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    main {
+      flex-direction: column;
+    }
+    .content {
+      padding-right: 0;
+    }
+    .sidebar {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1 align="center">Female Beauty</h1>
+  <marquee behavior="scroll" direction="right" scrollamount="8">Dapatkan semua produk kecantikan favoritmu!</marquee>
+</header>
+
+<nav>
+  <a href="index.html">Produk</a>
+  <a href="transaksi.html">Belanja</a>
+  <a href="tentang.html">Tentang Saya</a>
+</nav>
+
+<main>
+  <section class="content">
+    <h2 align="center">OUR BEST PRODUCT!</h2>
+    <div class="product-list">
+      <div class="product-card">
+          <img src="gambar/Facial Wash.jpeg" alt="Facial Wash" />
+        </a>
+        <h3>Face Wash</h3>
+        <p>Membersihkan dengan gentle tanpa membuat kering</p>
+        <a href="transaksi.html" class="btn-buy">Beli</a>
+      </div>
+      <div class="product-card">
+          <img src="gambar/Serum.jpeg" alt="Serum" />
+        </a>
+        <h3>Serum</h3>
+        <p>Membuat kulit menjadi cerah berseri</p>
+        <a href="transaksi.html" class="btn-buy">Beli</a>
+      </div>
+      <div class="product-card">
+          <img src="gambar/Moisturaizer.jpeg" alt="Moisturaizer"/>
+        </a>
+        <h3>Moisturaizer</h3>
+        <p>Kulit menjadi terhidrasi dan kenyal</p>
+        <a href="transaksi.html" class="btn-buy">Beli</a>
+      </div>
+      <div class="product-card">
+          <img src="gambar/Sunscreen.jpeg" alt="Sunscreen" />
+        </a>
+        <h3>Sunscreen</h3>
+        <p>Terlindungi dari paparan sinar matahari</p>
+        <a href="transaksi.html" class="btn-buy">Beli</a>
+      </div>
+    </div>
+  </section>
+  <aside class="sidebar">
+    <h2 align="center">Kategori Produk</h2>
+    <ol style="list-style">
+      <li>Makeup</li>
+      <li>Skincare</li>
+      <li>Parfum</li>
+      <li>Perawatan Rambut</li>
+      <li>Perawatan Tubuh</li>
+    </ol>
+    <br>
+    <h3 align="center">Info Kontak</h3>
+    <p align="center">Email: alifanaurashivani17@gmail.com</p>
+    <p align="center">Telp: 085797513717</p>
+  </aside>
+</main>
+<footer>
+  &copy; 2025 Female Beauty. All rights reserved.
+</footer>
+</body>
+</html>
