@@ -268,7 +268,7 @@
 
     const productName = urlParams.get('produk');
     const quantity = parseInt(urlParams.get('jumlah')) || 1;
-    let unitPrice = 0; // Harga satuan default
+    let unitPrice = 0;
 
     switch (productName) {
       case 'Face Wash':
@@ -288,7 +288,7 @@
     }
 
     const productTotal = unitPrice * quantity;
-    const shippingCost = 10000;
+    const shippingCost = 15000;
     const subtotal = productTotal;
     const grandTotal = subtotal + shippingCost;
 
@@ -327,3 +327,4 @@
 </body>
 
 </html>
+
