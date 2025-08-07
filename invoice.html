@@ -157,7 +157,7 @@
       display: none;
     }
   }
-  /* Responsive */
+  
   @media (max-width: 768px) {
     main {
       flex-direction: column;
@@ -215,7 +215,7 @@
           </tr>
         </thead>
         <tbody id="productRows">
-          <!-- Product rows will be inserted here by JavaScript -->
+          
         </tbody>
         <tfoot>
           <tr>
@@ -260,37 +260,35 @@
   document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
 
-    // Data pelanggan
+    
     document.getElementById('customerName').textContent = urlParams.get('nama') || 'N/A';
     document.getElementById('customerAddress').textContent = urlParams.get('alamat') || 'N/A';
     document.getElementById('customerPhone').textContent = urlParams.get('telepon') || 'N/A';
     document.getElementById('paymentMethod').textContent = urlParams.get('metode') || 'N/A';
 
-    // Data produk (contoh sederhana, karena hanya 1 produk dari form)
     const productName = urlParams.get('produk');
     const quantity = parseInt(urlParams.get('jumlah')) || 1;
     let unitPrice = 0; // Harga satuan default
 
-    // Menentukan harga berdasarkan produk
     switch (productName) {
       case 'Face Wash':
-        unitPrice = 120000;
+        unitPrice = 75000;
         break;
       case 'Serum':
-        unitPrice = 180000;
+        unitPrice = 120000;
         break;
       case 'Moisturaizer':
-        unitPrice = 160000;
+        unitPrice = 57000;
         break;
       case 'Sunscreen':
-        unitPrice = 130000;
+        unitPrice = 88000;
         break;
       default:
-        unitPrice = 0; // Jika produk tidak dikenal
+        unitPrice = 0;
     }
 
     const productTotal = unitPrice * quantity;
-    const shippingCost = 15000; // Biaya pengiriman tetap
+    const shippingCost = 10000;
     const subtotal = productTotal;
     const grandTotal = subtotal + shippingCost;
 
@@ -312,10 +310,9 @@
     document.getElementById('subtotal').textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
     document.getElementById('grandTotal').textContent = `Rp ${grandTotal.toLocaleString('id-ID')}`;
 
-    // Tanggal dan Nomor Struk (dinamis sederhana)
     const today = new Date();
     const dd = String(today.getDate()).padStart(2, '0');
-    const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
     const yyyy = today.getFullYear();
     document.getElementById('invoiceDate').textContent = `${dd} ${getMonthName(mm)} ${yyyy}`;
     document.getElementById('invoiceNumber').textContent = `FB-${yyyy}${mm}${dd}-${Math.floor(Math.random() * 1000).toString().padStart(3, '0')}`;
@@ -328,4 +325,5 @@
   }
 </script>
 </body>
+
 </html>
